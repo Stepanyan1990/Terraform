@@ -16,20 +16,20 @@ terraform {
 }
 
 
-resource "aws_s3_bucket_versioning" "mytfstate1990_versioning" {
-  bucket = "mytfstate1990"
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
+#resource "aws_s3_bucket_versioning" "mytfstate1990_versioning" {
+ # bucket = "mytfstate1990"
+  #versioning_configuration {
+   # status = "Enabled"
+  #}
+#}
 
-resource "aws_s3_bucket_ownership_controls" "mytfstate1990" {
-  bucket = "mytfstate1990"
+#resource "aws_s3_bucket_ownership_controls" "mytfstate1990" {
+ # bucket = "mytfstate1990"
 
-  rule {
-    object_ownership = "BucketOwnerEnforced"
-  }
-}
+  #rule {
+   # object_ownership = "BucketOwnerEnforced"
+  #}
+#}
 
 # resource "aws_s3_bucket_acl" "mytfstate1990_acl" {
 #   bucket = "mytfstate1990"
