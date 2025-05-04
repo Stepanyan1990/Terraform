@@ -5,12 +5,13 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket         = "mytfstate1990"
-    key            = "terraform/statefile.tfstate"
-    region         = "eu-central-1"
-    encrypt        = true
-    #dynamodb_table = "terraform-locks"
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "Stepanyan-Terraform"
+
+    workspaces {
+      name = "Terraform"
+    }
   }
 }
 
